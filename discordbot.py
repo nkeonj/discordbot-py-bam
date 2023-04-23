@@ -22,10 +22,12 @@ async def on_message(message):
     if message.content == f'{PREFIX}call':
         await message.channel.send("callback!")
 
-    if message.content.startswith(f'{PREFIX}hello'):
-        await message.channel.send('Hello!')
-
-
+    if message.content.startswith(f'{PREFIX} 안녕'):
+        await message.channel.send('안녕하세요! 😄 저는 멍텅구리 네오라고 해요!!')
+        
+    if message.content.startswith(f'{PREFIX} 안녕!'):
+        await message.channel.send('안녕하세요! 😄 저는 멍텅구리 네오라고 해요!!')
+        
 try:
     client.run(TOKEN)
 except discord.errors.LoginFailure as e:
